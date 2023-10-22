@@ -1,0 +1,292 @@
+/* Reset CSS for all devices */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles for all devices with rem units */
+body {
+  background-image: url(cap-images/newbanner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva;
+  font-size: 1rem;
+}
+
+/* Container styles for all devices */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* Header styles */
+.header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Navigation styles */
+.navbar {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  
+}
+
+
+.navbar  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.navbar  ul li{
+  margin: 20px;
+}
+
+.navbar  a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.logo {
+  font-family: cursive;
+  color: orangered;
+}
+
+.navbar a:active,
+.navbar a:hover {
+  color: orangered;
+  cursor: pointer;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+  display: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Show the hamburger icon in smaller screens */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+.nav-list.show-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+/* Rest of your CSS remains the same */
+
+
+.header-part {
+  width: 100%;
+  
+
+}
+
+.header-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 45%;
+  margin-top: 100px;
+}
+.header-img, .header-pic {
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.header-name {
+  text-align: center;
+  color: orangered;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.header-info {
+  text-align: center;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* The "about me" section */
+.section {
+  width: 100%;
+  margin-top: 200px;
+  background-color: #021845;
+  padding: 20px;
+  border-top-left-radius: 150px;
+  display: flex;
+  flex-direction: row; /* Display side by side by default */
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.section-img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px; /* Add some space between the image and text */
+  flex: 1; /* Allow the image to grow and take available space */
+}
+
+.img-img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.info-div {
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px;
+  flex: 2; /* Allow the text to take more space */
+}
+
+.dis {
+  color: orangered;
+}
+
+.abt {
+  text-decoration: underline;
+  text-decoration-color: orangered;
+  text-decoration-style: solid;
+  text-decoration-thickness: 4px;
+  margin-top: 20px;
+}
+
+.my-abt {
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack elements on smaller screens */
+  align-items: center; /* Center elements on smaller screens */
+}
+
+/* Rest of your CSS remains the same */
+
+
+
+ 
+
+/* Media query to handle small screens */
+@media (max-width: 768px) {
+  .section{
+    flex-direction: column; /* Stack elements on smaller screens */
+    align-items: center; /* Center elements on smaller screens */
+  }
+  .section-img {
+    max-width: 100%; /* Ensure the image does not overflow the container */
+    height: auto; /* Allow the image to scale with the container */
+  }
+}
+
+
+.box{
+  border: 1px solid orangered;
+  padding: 20px 20px 20px 20px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.nam-age{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pho-add{
+  display: flex;
+  justify-content: space-between;
+}
+.exp-free{
+  display: flex;
+  justify-content: space-between;
+}
+.social-link a{
+  color: white;
+}
+
+
+.contact-section{
+  background-color: rgb(125, 221, 219);
+  
+  
+}
+
+/* Contact form styles */
+.contact-form {
+  background-color: white;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bolder;
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 50%;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid orangered;
+  border-radius: 5px;
+  font-size: 17px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+button {
+  display: block;
+  margin: auto;
+  resize: vertical;
+  background: orangered;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 17px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(35, 35, 108);
+}
+
+
