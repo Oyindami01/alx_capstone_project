@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Rest of your code (form validation and sending message) remains the same
+
 
 // form validation
 
