@@ -142,7 +142,7 @@ body {
   padding: 20px;
   border-top-left-radius: 150px;
   display: flex;
-  flex-direction: row; /* Display side by side by default */
+  flex-direction: row; 
   align-items: center;
   text-align: center;
   position: relative;
