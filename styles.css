@@ -9,7 +9,7 @@
 
 /* Base styles for all devices with rem units */
 body {
-  background-image: url(cap-images/newbanner.jpg);
+  background-image: url(alx-images/newbanner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
