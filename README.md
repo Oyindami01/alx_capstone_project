@@ -42,7 +42,7 @@ This process of this project improved my coding skill as a frontend developer.
 - EmailJS:  I used it to send email messages from my website's contact form.         This service is used to send email using JavaScript without setting up a server.
 - FontAwesome: I used it include icons in your web pages, such as social media icons.
 
-### IMAGES
+**IMAGES**
 https://github.com/Oyindami01/alx_capstone_project/tree/main/alx-images
 
 ### CREDIT/ ACKNOWLEDGEMENT
@@ -51,9 +51,9 @@ Thank you ALX
 
 
 
-### CONTACT INFO AND SOCIAL MEDIA LINKS
+**CONTACT INFO AND SOCIAL MEDIA LINKS**
 
-Email: olapejualliyu@gmail.com
-Github: "https://github.com/Oyindami01"
-LinkedIn: "https://www.linkedin.com/in/olapeju-alliyu-300b7226a"
-Twitter: "https://x.com/alliyuolapeju?s=11&t=AoWbfDEPk8R4G0UQlKkeJw"
+- Email: olapejualliyu@gmail.com
+- Github: "https://github.com/Oyindami01"
+- LinkedIn: "https://www.linkedin.com/in/olapeju-alliyu-300b7226a"
+- Twitter: "https://x.com/alliyuolapeju?s=11&t=AoWbfDEPk8R4G0UQlKkeJw"
