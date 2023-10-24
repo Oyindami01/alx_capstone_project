@@ -378,11 +378,17 @@ header .header-img h4 {
   margin-top: 2rem;
 }
 
-.my-abt h2,
-.my-abt h1,
+.my-abt h3{
+  text-decoration: underline;
+  text-decoration-color: orangered;
+}
 .my-abt h4 {
   font-family: cursive;
   color: white;
+}
+
+.my-abt h1{
+  font-size: 20px;
 }
 
 /* Responsive design for tablets (768px - 1023px) */
