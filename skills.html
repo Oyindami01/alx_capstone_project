@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>skills</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      header {
+        background-image: url(alx-images/newbanner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        justify-content: center;
+        align-items: center;
+        height: 125vh;
+      }
+      #skills {
+        background-color: transparent;
+      }
+      body,
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      @media screen and(max-width: 600px) {
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        #skills {
+          background-color: transparent;
+          border-radius: 3rem;
+          margin-bottom: -2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER AND NAV -->
+    <header>
+      <div class="head">
+        <div class="logo">
+          <h1>
+            <span style="color: orangered; font-size: 4rem">K</span>hairat
+          </h1>
+        </div>
+        <div class="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="https://github.com/Oyindami01">projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- SECTION -->
+      <section id="skills">
+        <div class="skill-info">
+          <h2>My Skills</h2>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>Javascript</li>
+            <li>Responsive websites</li>
+            <li>Version Control System (git&github)</li>
+          </ul>
+        </div>
+        <div class="skill-container">
+          <div class="skill">
+            <span class="skill-label">HTML/CSS</span>
+            <div style="margin-bottom: 2rem" class="skill-bar">
+              <div class="skill-progress" style="width: 79%" data-width="79%">
+                79%
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-label">JavaScript</span>
+            <div style="margin-bottom: 2rem" class="skill-bar">
+              <div class="skill-progress" style="width: 55%" data-width="55%">
+                55%
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-label">Responsive Website</span>
+            <div style="margin-bottom: 2rem" class="skill-bar">
+              <div class="skill-progress" style="width: 57%" data-width="57%">
+                57%
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-label">Version Control (Git/GitHub)</span>
+            <div style="margin-bottom: 2rem" class="skill-bar">
+              <div class="skill-progress" style="width: 69%" data-width="69%">
+                69%
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <script src="script.js"></script>
+    <script src="menu-toggle.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  </body>
+</html>
