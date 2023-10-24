@@ -3,155 +3,276 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home-page</title>
+    <title>Alliyu-olapeju</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   <link rel="stylesheet" href="font-awesome.css">
   </head>
+  <style>
+    
+      button {
+        padding: 0.7rem;
+        background-color: orangered;
+        box-shadow: 5px 5px 5px gray;
+        border: none;
+        color: #000;
+        text-align: center;
+        text-decoration: none;
+        display: inline-flex;
+        font-size: 16px;
+        margin: 10px 2px;
+        cursor: pointer;
+        transition: transform 2s ease-in-out;
+      }
+
+
+      /* Styles for Desktop (1024px and above) */
+@media screen and (min-width: 1024px) {
+    #about {
+        
+       
+    }
+
+    #about h2 {
+        font-size: 32px;
+    }
+    
+
+    #about p {
+        font-size: 20px;
+    }
+    #about .my-abt img{
+        width: 40%;
+        height: 30rem;
+        margin-right: 8rem;
+    }
+    #about .my-abt .abt-info{
+        width: 60%;
+
+
+    }
+
+
+
+    #about .my-abt .abt-box{
+
+    }
+
+        
+        #about .abt-box .nam-add{
+            text-align: center;
+            display:flex;
+            flex-direction: row;
+            margin: 1rem;
+        }
+
+        
+    #about .abt-box .age-pho
+    {
+        text-align: center;
+       display:flex;
+    flex-direction: row;
+    margin: 1rem
+     }
+            
+        
+        #about .abt-box .exp-fre{
+            text-align: center;
+            display:flex;
+            flex-direction: row;
+            margin:1rem ;}
+
+
+    
+
+}
+
+
+  </style>
   <body>
-    <div class="bg-image"></div>
-    <!-- HEADER -->
-    <div class="header">
-      <!-- LOGO -->
-      <div class="logo">
-        <h2><span style="color: white; font-size: 43px">K</span>hairat</h2>
+    <!-- HEADER AND NAV -->
+    <header>
+      <div class="head">
+        <div class="logo">
+          <h1>
+            <span style="color: orangered; font-size: 4rem">K</span>hairat
+          </h1>
+        </div>
+        <div class="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
       </div>
-      <!-- HAMBURGER MENU ICON -->
-      <div class="menu-icon" onclick="toggleNav()">&#9776;</div>
-      <!-- NAV_BAR -->
-      <div class="navbar">
-        <ul class="nav-list">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact Me</a></li>
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="https://github.com/Oyindami01">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-img">
+        <img src="alx-images/my-image-1.JPG" alt="my-image" />
+        <div class="header-name">
+          <h1>ALLIYU OLAPEJU</h1>
+          <h4>A FRONTEND WEB DEVELOPER.</h4>
+        </div>
+      </div>
+    </header>
+
+      <!-- SECTION -->
+    <section id="about">
+        <div class="my-abt">
+            <img src="alx-images/my-image2.jpg" alt="my-image" />
+            <div class="abt-info">
+                <h3>Discover</h3>
+                <h1>About Me</h1>
+                <h4>
+                    My name is Alliyu Olapeju Khairat. I am a frontend web developer
+                    based in Lagos State, Nigeria. <br> I am very passionate and dedicated to my work. <br>
+                    
+                     I am a web developer with a passion for creating beautiful and functional websites. <br>
+                     With a year of experience in professional frontend web development,
+                     I have acquired the skills <br>necessary to build great and
+                    premium websites.
+                  </h4>
+                  <div class="abt-box">
+                    <div class="nam-add">
+                        <p><strong>Name:</strong> Khairat</p>
+                        <p><strong>Address:</strong> Lagos, Nigeria</p>
+                    </div>
+                    <div class="age-pho">
+                        <p><strong>Age</strong> 22</p>
+                        <p><strong>Phone</strong> +234 8029318703</p>
+                    </div>
+                    <div class="exp-fre">
+                        <p><strong>Experience:</strong> 1 year</p>
+                        <p><strong>Freelancer:</strong> Available</p>
+                    </div>
+                    <div class="email">
+                        <p><strong>Email:</strong> olapejualliyu@gmail.com</p>
+                    </div>
+                    <div class="github">
+                        <p><strong>Github link:</strong>
+                            <a href="https://github.com/Oyindami01">https://github.com/Oyindami01</a> </p>
+                    </div>
+                    <div class="linked">
+                        <p>
+                            <strong>LinkedIn:</strong>
+                            <a href="https://www.linkedin.com/in/olapeju-alliyu-300b7226a"
+                              >https://www.linkedin.com/in/olapeju-alliyu-300b7226a</a
+                            >
+                          </p>
+                    </div>
+                    
+            </div>
+            <button id="but"><a style="text-decoration: none;color:white;" href="contact.html">Contact Me</a></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION -->
+    <section id="skills">
+      <div class="skill-info">
+        <h2>My Skills</h2>
+        <ul>
+          <li>HTML/CSS</li>
+          <li>Javascript</li>
+          <li>Responsive websites</li>
+          <li>Version Control System (git&github)</li>
         </ul>
       </div>
-    </div>
-    <div class="header-part">
-      <div class="header-img">
-        <img src="cap-images/my-image.JPG" alt="" class="header-pic" />
-      </div>
-      <div class="header-name">
-        <h1>ALLIYU KHAIRAT</h1>
-      </div>
-      <div class="header-info">
-        <h4>A FRONTEND WEB DEVELOPER.</h4>
-      </div>
-    </div>
-    <!-- ABOUT ME SECTION -->
-    <div class="section">
-      <!-- my image-->
-      <div class="section-img">
-        <img src="cap-images/my-image2.jpg" alt="" class="img-img" />
-      </div>
-      <!-- info div -->
-      <div class="info-div">
-        <div class="dis">
-          <h3>Discover</h3>
-        </div>
-        <div class="abt">
-          <h1>About Me</h1>
-        </div>
-        <div class="my-abt">
-          <h4>
-            My name is Alliyu Olapeju Khairat. I am a frontend web developer
-            based in Lagos State, Nigeria. I am very passionate and dedicated to
-            my work. With a year of experience in professional frontend web
-            development, I have acquired the skills necessary to build great and
-            premium websites.
-          </h4>
-        </div>
-        <div class="box">
-          <div class="nam-age">
-            <p><strong>Name:</strong> Khairat</p>
-            <p><strong>Phone:</strong> +234 8029318703</p>
-          </div>
-          <div class="pho-add">
-            <p><strong>Age:</strong> 22 years old</p>
-            <p><strong>Address:</strong> Lagos, Nigeria</p>
-          </div>
-          <div class="exp-free">
-            <p><strong>Experience:</strong> 1 year</p>
-            <p><strong>Freelancer:</strong> Available</p>
-          </div>
-          <div class="social-link">
-            <p>
-              <strong>Github:</strong>
-              <a href="https://github.com/Oyindami01"
-                >https://github.com/Oyindami01</a
-              >
-              <br /><br />
-            </p>
-            <p>
-              <strong>LinkedIn:</strong>
-              <a href="https://www.linkedin.com/in/olapeju-alliyu-300b7226a"
-                >https://www.linkedin.com/in/olapeju-alliyu-300b7226a</a
-              >
-            </p>
+      <div class="skill-container">
+        <div class="skill">
+          <span   class="skill-label">HTML/CSS</span>
+          <div style="margin-bottom: 2rem;" class="skill-bar">
+              <div class="skill-progress" style="width: 79%;" data-width="79%">79%</div>
           </div>
         </div>
-        <div class="button">
-          <button
-            style="margin-top: 20px; padding: 10px; background-color: orangered"
-          >
-            <a style="text-decoration: none; color: white" href=""
-              >CONTACT ME</a
-            >
-          </button>
+        <div class="skill">
+          <span class="skill-label">JavaScript</span>
+          <div style="margin-bottom: 2rem;" class="skill-bar">
+              <div class="skill-progress" style="width: 55%;" data-width="55%">55%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-label">Responsive Website</span>
+          <div style="margin-bottom: 2rem;" class="skill-bar">
+              <div class="skill-progress" style="width: 57%;" data-width="57%">57%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-label">Version Control (Git/GitHub)</span>
+          <div style="margin-bottom: 2rem;" class="skill-bar">
+              <div class="skill-progress" style="width: 69%;" data-width="69%">69%</div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- CONTACT ME SECTION -->
-    <div class="contact-section">
-      <div style="background-color: white" class="contact-form">
-        <h1
-          style="
-            color: orangered;
-            padding-top: 20px;
-            margin-bottom: 40px;
-            text-align: center;
-          "
-        >
-          CONTACT ME
-        </h1>
-        <form onsubmit="return validateForm();">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Olapeju Alliyu" />
-            <p id="name-error" class="error-message"></p>
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="olapejualliyu@gmail.com"
-            />
-            <p id="email-error" class="error-message"></p>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Subject" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Message" rows="5"></textarea>
-            <p id="message-error" class="error-message"></p>
-          </div>
-          <div class="form-group">
-            <button type="button" onclick="sendMessage()">Send Message</button>
-          </div>
-        </form>
+
+      
+    </section>
+    
+    <!-- SECTION -->
+
+    <section id="contact">
+      <div class="contact-info">
+          <h1>GET IN TOUCH WITH ME</h1>
+          <p>Fill the form below</p>
       </div>
-    </div>
-    <script>
-      function toggleNav() {
-        const nav = document.querySelector(".nav-list");
-        const navbar = document.querySelector(".navbar");
-        nav.classList.toggle("show-nav");
-        navbar.classList.toggle("show-nav");
-      }
-    </script>
+      <div class="contact-form">
+          <h3>CONTACT FORM</h3>
+          <form id="contact-form">
+              <div class="form-group">
+                  <label for="name">Name: </label>
+                  <input type="text" id="name" required placeholder="Olapeju Khairat">
+              </div>
+  
+              <div class="form-group">
+                  <label for="email">Email: </label>
+                  <input type="email" id="email" required placeholder="e.g olapejualliyu@gmail.com">
+              </div>
+  
+              <div class="form-group">
+                  <div id="message">
+                      <label for="message">Message: </label>
+                      <textarea id="message" required placeholder="Type your message"></textarea>
+                  </div>
+              </div>
+              <button type="submit">
+                <i style="color: white; margin-right:0.5rem" class="fas fa-paper-plane"></i>Send Message</button>
+          </form>
+      </div>
+  </section>
+  
+
+    <article>
+      <main>
+        <footer id="footer">
+          <div class="my-footer">
+            <a href="home.html"><h5>
+              <span style="color: orangered;">K</span>hairat
+            </h5></a>
+            
+
+        <p> Capstone Project by:  <span style="color: white;margin-left:0.5rem; margin-right:0.5rem">  Alliyu khairat </span>     &copy; 2023 Your Website. All rights reserved. <i style="color: orangered;" class="fas fa-heart"> </i>
+           <a style="color: white;" href="https://x.com/alliyuolapeju?s=11&t=AoWbfDEPk8R4G0UQIKkeJw"><i class="fab fa-twitter"></i></a> 
+           <a style="color: white;" href="https://github.com/Oyindami01"><i class="fab fa-github"></i></a>
+           </p>
+      </p>
+
+          </div>
+
+        </footer>
+      </main>
+    </article>
+    
+
+    
+    <script src="script.js"></script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   </body>
 </html>
