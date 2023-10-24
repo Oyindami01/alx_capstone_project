@@ -447,7 +447,7 @@ header .header-img h4 {
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-  width: 100%;
+  width: 50%;
   padding: 10px;
   margin: 0.5rem 0;
   border: none;
