@@ -1,4 +1,4 @@
-/* Reset CSS for all devices */
+/* for all devices */
 *,
 *::before,
 *::after {
@@ -7,9 +7,9 @@
   box-sizing: border-box;
 }
 
-/* Base styles for all devices with rem units */
+
 body {
-  background-image: url(alx-images/newbanner.jpg);
+  background-image: url(cap-images/newbanner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,7 +18,7 @@ body {
   font-size: 1rem;
 }
 
-/* Container styles for all devices */
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -26,255 +26,732 @@ body {
   padding: 1.25rem;
 }
 
-/* Header styles */
-.header {
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
 
-/* Navigation styles */
-.navbar {
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
 }
+@media screen and(max-width: 600px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
+}
+    
 
 
-.navbar  ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-.navbar  ul li{
-  margin: 20px;
+
+/*   HEADER AND NAVIGATION SECTION */
+
+header{
+    background-image: url(alx-images/newbanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.navbar  a {
-  color: white;
-  text-decoration: none;
-  font-family: 'Arial', 'Helvetica', sans-serif;
+
+
+
+/* Styles for Mobile devices(767px) */
+@media screen and (max-width: 767px) {
+    header {
+        padding: 15px;
+    }
+
+    nav li {
+        margin-right: 10px;
+    }
 }
 
-.logo {
-  font-family: cursive;
-  color: orangered;
+/* Styles for Tablet (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header {
+        padding: 20px;
+    }
+
+    nav li {
+        margin-right: 30px;
+    }
 }
 
-.navbar a:active,
-.navbar a:hover {
-  color: orangered;
-  cursor: pointer;
+/* Styles for Desktop (1024px and above) */
+@media screen and (min-width: 1024px) {
+    header {
+        padding: 30px;
+    }
+
+    nav li {
+        margin-right: 40px;
+    }
 }
 
-/* Hamburger menu icon */
-.menu-icon {
-  display: none;
-  font-size: 1rem;
-  cursor: pointer;
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    
 }
 
-/* Show the hamburger icon in smaller screens */
+.logo h1{
+    font-family: cursive;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    margin: 20px;
+    list-style-type: none;
+    
+}
+nav ul li:hover{
+    animation: zoomInOut 2s infinite;
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+
+nav ul li a:hover{
+color: orangered;
+}
+
+nav ul li a:active{
+    color: orangered;
+}
+
+
+/* Media query for mobile devices */
+
 @media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
+    header {
+        position: relative; 
+        
+    }
+
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 20px; 
+        right: 10px; 
+    }
+
+    .menu-toggle :hover{
+        background-color: orangered;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 45px;
+        background-color: transparent;
+        width: 8rem;
+        text-align: right;
+        z-index: 1;
+    }
+    nav ul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li{
+        margin: 10px 0 0 0;
+        padding-right: 2rem;
+    }
+
+    nav ul li:hover{
+        animation: zoomInOut 2s infinite;
+    }
+    
+    @keyframes zoomInOut {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+    }
+
+    
+    nav.show-nav {
+        display: flex;
+    }
+    
+.show-nav {
+     
+    backdrop-filter: blur(5px); 
+    background-color: rgba(255, 255, 255, 0.7); 
+
+ 
 }
 
 
-.nav-list.show-nav {
-  display: flex;
-  flex-direction: column;
 }
 
-.header-part {
-  width: 100%;
-  
 
-}
 
-.header-img{
-  display: flex;
+header .header-img{
   justify-content: center;
   align-items: center;
   margin-left: 45%;
   margin-top: 100px;
 }
-.header-img, .header-pic {
-  width: 200px;
+
+header .header-img img{
+    width: 200px;
   height: 200px;
   border: 1px solid;
   border-radius: 50%;
 }
 
-.header-name {
-  text-align: center;
-  color: orangered;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+header .header-img h1{
+    color: orangered;
+    animation: headerAnimation 2s linear infinite; 
 }
 
-.header-info {
-  text-align: center;
-  color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+@keyframes headerAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
-
-/* The "about me" section */
-.section {
-  width: 100%;
-  margin-top: 200px;
-  background-color: #021845;
-  padding: 20px;
-  border-top-left-radius: 150px;
-  display: flex;
-  flex-direction: row; 
-  align-items: center;
-  text-align: center;
-  position: relative;
+header .header-img h4{
+    color: white;
+    animation: headerAnimationH4 2.5s linear infinite; 
 }
 
-.section-img {
-  max-width: 100%;
-  height: auto;
-  margin-right: 20px; 
-  flex: 1; 
-}
-
-.img-img {
-  max-width: 200px;
-  height: auto;
-  border-radius: 5px;
-}
-
-.info-div {
-  color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 20px;
-  flex: 2; 
-}
-
-.dis {
-  color: orangered;
-}
-
-.abt {
-  text-decoration: underline;
-  text-decoration-color: orangered;
-  text-decoration-style: solid;
-  text-decoration-thickness: 4px;
-  margin-top: 20px;
-}
-
-.my-abt {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
+@keyframes headerAnimationH4 {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 
-/* Media query to handle small screens */
-@media (max-width: 768px) {
-  .section{
-    flex-direction: column; 
+   /* MY ABOUT SECTION */
+
+#about{
+    margin-bottom: 2rem;
+    
+}
+
+
+
+
+
+/* Styles for Mobile (Up to 767px) */
+    #about {
+        padding: 20px;
+    }
+
+    #about h2 {
+        font-size: 24px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    #about img{
+        max-width: 150%;
+        height: 20rem;
+       width: 600rem;
+    }
+
+    #about .abt-info{
+        width: 50%;
+    }
+    #about .abt-info h1, h3, h4{
+      padding-left: 2rem; 
+    }
+
+    #about .abt-box{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #about .abt-box p{
+        margin: 20px;
+    }
+    #about .abt-box .nam-add{
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+    #about .abt-box .age-pho{
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+    #about .abt-box .exp-fre{
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        margin:1rem ;
+    }
+
+
+/* Styles for Tablet (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #about {
+        padding: 30px;
+    }
+
+    #about h2 {
+        font-size: 28px;
+    }
+
+    #about p {
+        font-size: 18px;
+    }
+}
+
+/* Styles for Desktop (1024px and above) */
+@media screen and (min-width: 1024px) {
+    #about {
+        padding: 40px;
+    }
+
+    #about h2 {
+        font-size: 32px;
+    }
+
+    #about p {
+        font-size: 20px;
+    }
+
+    .abt-box .nam-add{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+.my-abt{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.my-abt img{
+    width: 20%;
+    height: 350px;
+    margin-top: 4rem;
+}
+.abt-info h3{
+    color: orangered;
+    padding-top: 4rem;
+}
+.abt-info h1{
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+    text-decoration-color: orangered;
+    text-decoration-thickness: 4px;
+    margin-bottom: 2rem;
+}
+.abt-info h4{
+    color: white;
+    margin-bottom: 2rem;
+}
+.abt-box{
+    border: 2px solid orangered;
+    color: white;
+    margin-top: 30px;
+    justify-content: space-around;
     align-items: center;
-  }
-  .section-img {
-    max-width: 100%; 
-    height: auto; 
-  }
+}
+
+.abt-box .nam-add{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.abt-box .age-pho{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.abt-box .exp-fre{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.abt-box .email{
+margin-top: 20px;
+padding-bottom: 2rem;
+}
+
+.abt-box .github{
+    padding-bottom: 2rem;
+}
+.abt-box .github a{
+    margin-top: 20px;
+    color: white;
+}
+
+.abt-box .github a:hover{
+    color: orangered;
+}
+
+.abt-box .linked{
+    padding-bottom: 2rem;
+}
+.abt-box .linked a{
+    margin-top: 20px;
+    color: white;
+}
+.abt-box .linked a:hover{
+    color: orangered;
 }
 
 
-.box{
-  border: 1px solid orangered;
-  padding: 20px 20px 20px 20px;
-  margin-top: 30px;
-  width: 100%;
+#but{
+    margin-top: 2rem;
+    align-items: center;
+    box-shadow: 3px 3px 3px 3px gray;
+}
+#but:hover{
+background-color: rgb(28, 28, 76);
+
 }
 
-.nam-age{
-  display: flex;
-  justify-content: space-between;
+/* SKILLS SECTION */
+#skills{
+    background-color: rgb(33, 33, 80);
+    border-radius: 3rem;
+    margin-bottom: -2rem;
+}
+#skills h2{
+    text-align: center;
+    color: white;
+    padding-top: 2rem;
+    font-size: 3rem;
+    animation: pulse 2s infinite;
 }
 
-.pho-add{
-  display: flex;
-  justify-content: space-between;
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
-.exp-free{
-  display: flex;
-  justify-content: space-between;
+
+#skills ul li{
+    color: white;
+    margin-left: 2rem;
+    margin: 2rem;
+    
 }
-.social-link a{
-  color: white;
+
+.skills-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 10px;
+    margin-left: 2rem;
+    color: white;
+    padding-bottom: 2rem;
+}
+
+.skill-label {
+    font-weight: bold;
+    margin: 20rem;
+
+    
+}
+
+.skill-bar {
+    width: 50%;
+    background-color: #ccc;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.skill-progress {
+    height: 100%;
+    line-height: 30px;
+    color: white;
+    background: orangered;
+    border-radius: 5px;
+    
 }
 
 
-.contact-section{
-  background-color: rgb(125, 221, 219);
-  
-  
+@keyframes fill {
+    0% {
+        width: 0;
+    }
 }
 
-/* Contact form styles */
-.contact-form {
-  background-color: white;
+/* Responsive Layout for Mobile (up to 600px) */
+@media (max-width: 600px) {
+    .skills-container {
+        width: 90%;
+    }
+
+    .skill-info h2{
+        animation: pulse 2s infinite;
+
+    }
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+    }
+
+    .skill-bar {
+        height: 20px;
+    }
+
+    .skill-progress {
+        line-height: 20px;
+    }
 }
 
-.form-group {
-  margin-bottom: 20px;
+/* Responsive Layout for Tablet (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .skills-container {
+        width: 70%;
+    }
+
+    .skill-bar {
+        height: 25px;
+    }
+
+    .skill-progress {
+        line-height: 25px;
+    }
+
+    .skill-label{
+        font-size: 0.7rem;
+        text-align: center;
+    }
 }
 
-label {
-  display: block;
-  font-weight: bolder;
-  text-align: left;
+/* Responsive Layout for Desktop (1025px and above) */
+@media (min-width: 1025px) {
+    .skills-container {
+        width: 60%;
+    }
 }
 
-input,
-textarea {
-  width: 50%;
-  align-items: center;
-  padding: 10px;
-  border: 1px solid orangered;
-  border-radius: 5px;
-  font-size: 17px;
-  box-sizing: border-box;
-  resize: vertical;
+   /* CONTACT SECTION */
+
+
+#contact{
+    background-color: lightskyblue;
+    text-align: center;
+    padding-top: 4rem;
 }
 
-button {
-  display: block;
-  margin: auto;
-  resize: vertical;
-  background: orangered;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 17px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+.contact-info h1{
+color: white;
+font-size: 2rem;
+animation: bounce 2s infinite;
 }
 
-button:hover {
-  background: rgb(35, 35, 108);
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
+
+.contact-form{
+    background-color: white;
+    text-align: center;
+    margin-top: 4rem;
+    border-radius: 10rem;
+    margin: 2rem;
+    padding-top: 2rem;
+    
+}
+
+.contact-form h3{
+    padding-bottom: 2rem;
+    color: orangered;
+}
+
+.contact-form .form-group{
+    margin: 2rem;
+}
+.contact-form label{
+    text-align: center;
+}
+.contact-form .form-group input{
+    width: 50%;
+}
+
+.form-group #message{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+textarea{
+    width: 50%;
+    height: 7rem;
+    text-align: left;
+    
+}
+
+button{
+    padding: 0.7rem;
+    background-color: orangered;
+    box-shadow: 5px 5px 5px gray;
+    border: none; 
+    color: #000; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    transition: transform 2s ease-in-out;
+    
+}
+
+
+button:hover{
+    background-color: blue;
+    color: white;
+    animation: buttonAnimation 2s;
+}
+
+@keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* FOOTER */
+
+#footer{
+    background-color: rgb(38, 52, 81);
+    margin-top: -2rem;
+    
+}
+.my-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.my-footer a{
+    text-decoration: none;
+    
+}
+
+.my-footer a h5{
+    font-size: 1rem;
+    color: white;
+    font-family: cursive;
+}
+
+/* For mobile devices */
+#footer {
+    font-size: 0.7rem;
+    
+   
+}
+
+#footer h5{
+    font-size:0.7rem ;
+    margin-right: 2rem;
+
+}
+
+
+
+/* For tablets and larger screens */
+@media screen and (min-width: 768px) {
+    #footer {
+        font-size: 1.5rem;
+        padding: 20px;
+        
+    }
+}
+
+
+/* For larger screens */
+@media screen and (min-width: 1024px) {
+    #footer {
+        font-size: 1.5rem;
+        padding: 30px;
+        
+    }
+}
+
+
 
 
