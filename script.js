@@ -1,110 +1,103 @@
-// Variable to track the state of the navigation bar
-let isNavOpen = false;
+// script for the hambuger icon
 
-function toggleNav() {
-  const nav = document.querySelector(".nav-list");
-  const navbar = document.querySelector(".navbar");
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("nav");
 
-  isNavOpen = !isNavOpen; // Toggle the state
-
-  if (isNavOpen) {
-    nav.classList.add("show-nav");
-    navbar.classList.add("show-nav");
-  } else {
-    nav.classList.remove("show-nav");
-    navbar.classList.remove("show-nav");
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  const navIcon = document.querySelector(".menu-icon");
-
-  navIcon.addEventListener("click", function (event) {
-    event.stopPropagation();
-    toggleNav();
+  menuToggle.addEventListener("click", function() {
+      nav.classList.toggle("show-nav");
   });
 
-  document.addEventListener("click", function (event) {
-    if (isNavOpen && !navIcon.contains(event.target)) {
-      toggleNav();
-    }
+  
+  document.addEventListener("click", function(event) {
+      if (!menuToggle.contains(event.target) && !nav.contains(event.target)) {
+          nav.classList.remove("show-nav");
+      }
+  });
+});
+
+// script to control the animation
+const skillProgressBars = document.querySelectorAll(".skill-progress");
+
+skillProgressBars.forEach(skillProgressBar => {
+  if (window.innerWidth <= 600) {
+      skillProgressBar.style.animation = "fill 4s forwards"; 
+  } else {
+      skillProgressBar.style.animation = "none"; 
+  }
+});
+
+
+
+// script to validate form
+
+document.addEventListener("DOMContentLoaded", function() {
+  const contactForm = document.getElementById("contact-form");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+  contactForm.addEventListener("submit", function(event) {
+      let isValid = true;
+
+      if (nameInput.value.trim() === "") {
+          isValid = false;
+          alert("Name is required.");
+      }
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(emailInput.value)) {
+          isValid = false;
+          alert("Please enter a valid email address.");
+      }
+
+      if (messageInput.value.trim() === "") {
+          isValid = false;
+          alert("Message is required.");
+      }
+
+      if (!isValid) {
+          event.preventDefault(); 
+      }
+  });
+});
+
+
+// script to send message
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  emailjs.init("YVAQDL-aKZq0UQ-SQ"); 
+
+  const contactForm = document.getElementById("contact-form");
+
+  contactForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+
+      emailjs.send("service_hncxfg8", "template_xwpz9us", {
+          sender_name: name,
+          sender_email: email,
+          message: message,
+      })
+      .then(function(response) {
+          console.log("Email sent:", response);
+          alert("Email sent successfully!");
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+      })
+      .catch(function(error) {
+          console.error("Email send failed:", error);
+          alert("Email send failed. Please try again later.");
+      });
   });
 });
 
 
 
-// form validation
 
-function validateForm() {
-  const nameInput = document.getElementById("name");
-  const name = nameInput.value.trim();
-  const nameError = document.getElementById("name-error");
 
-  const messageInput = document.getElementById("message");
-  const message = messageInput.value.trim();
-  const messageError = document.getElementById("message-error");
-
-  const emailInput = document.getElementById("email");
-  const email = emailInput.value.trim();
-  const emailError = document.getElementById("email-error");
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  let isValid = true;
-
-  if (name === "") {
-    nameError.textContent = "Name is required.";
-    nameInput.focus();
-    isValid = false;
-  } else {
-    nameError.textContent = "";
-  }
-
-  if (message === "") {
-    messageError.textContent = "Message is required.";
-    messageInput.focus();
-    isValid = false;
-  } else {
-    messageError.textContent = "";
-  }
-
-  if (email === "" || !emailRegex.test(email)) {
-    emailError.textContent = "Please enter a valid email address.";
-    emailInput.focus();
-    isValid = false;
-  } else {
-    emailError.textContent = "";
-  }
-
-  return isValid;
-}
-
-// To send message
-
-function sendMessage() {
-  (function () {
-    emailjs.init("Wp2mMuvahyPJTJm0m"); // Account Public Key
-  })();
-
-  var serviceID = "service_hncxfg8"; // Email Service ID
-  var templateID = "template_xwpz9us"; // Email Template ID
-
-  var params = {
-    sendername: document.querySelector("#name").value,
-    senderemail: document.querySelector("#email").value,
-    subject: document.querySelector("#subject").value,
-    message: document.querySelector("#message").value,
-  };
-
-  emailjs
-    .send(serviceID, templateID, params)
-    .then(function (response) {
-      alert(
-        "Thank you, " +
-          params.sendername +
-          "! Your message has been sent."
-      );
-    })
-    .catch(function (error) {
-      console.error("Error sending email:", error);
-    });
-}
