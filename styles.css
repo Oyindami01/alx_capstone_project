@@ -317,6 +317,9 @@ header .header-img h4 {
 #about {
   margin-bottom: 2rem;
 }
+#about .abt-info h3, h1{
+  color: white
+}
 
 #about .abt-box{
   color: white;
@@ -356,6 +359,9 @@ header .header-img h4 {
 
   #about h2 {
     font-size: 24px;
+  }
+  #about .abt-info h1, h3{
+    color:white
   }
 
   #about p {
