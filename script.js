@@ -81,12 +81,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
         const message = document.getElementById("message").value;
 
 
         emailjs.send("service_hncxfg8", "template_xwpz9us", {
             sender_name: name,
             sender_email: email,
+            subject: subject,
             message: message,
         })
         .then(function(response) {
