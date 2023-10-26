@@ -40,7 +40,7 @@ This process of this project improved my coding skill as a frontend developer.
 - CSS (Cascading Style Sheets): I used to style and format my web page, including layout, colors, fonts, and responsive design.
 - JavaScript:  I used it to add interactivity to my web page, such as form validation and handling the hamburger menu toggle functionality.
 - EmailJS:  I used it to send email messages from my website's contact form.         This service is used to send email using JavaScript without setting up a server.
-- FontAwesome: I used it include icons in your web pages, such as social media icons.
+- FontAwesome: I used it include icons in my web pages, such as social media icons.
 
 **IMAGES**
 https://github.com/Oyindami01/alx_capstone_project/tree/main/alx-images
